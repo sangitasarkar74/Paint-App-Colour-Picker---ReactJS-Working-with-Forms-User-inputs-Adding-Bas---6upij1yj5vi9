@@ -19,12 +19,12 @@ const colourConfig = [{
   classname: 'btn-green',
   background: 'rgb(44, 209, 88)'
 }
-]
+];
 
 const title = 'Select the gradient and then the Box to change the color';
 
 const App = () => {
-  let [nextBackground, selectNextBackground] = useState({ background: "" })
+  let [nextBackground, selectNextBackground] = useState({ background: "" });
   const applyColor = (updateSelectionStyle) => {
     updateSelectionStyle(nextBackground)
   }
@@ -41,14 +41,13 @@ const App = () => {
 
       <div className='row' id="children-wrapper">
         {
-          ["selection1", "selection2", "selection3"].map(key => (
+          ["selection1", "selection2", "selection3"].map((key) => (
             <Selection key={key} applyColor={applyColor} />
           ))
         }
       </div>
     </div >
-  )
-}
-
+  );
+};
 
 export default App;
